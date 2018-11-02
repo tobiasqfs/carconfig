@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarConfigurator.VehiclesPage">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <ListView x:Name="VehiclesList"
+                  ItemSelected="VehiclesList_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="5"
+                              ColumnSpacing="0"
+                              RowSpacing="0"
+                              VerticalOptions="Center">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="{Binding name}"
+                                   Grid.Row="0"
+                                   Grid.Column="0">
+                                </Label>
+                                <Label Text="{Binding priceString}"
+                                   Grid.Row="0"
+                                   Grid.Column="2"></Label>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <AbsoluteLayout x:Name="overlay"
+                        AbsoluteLayout.LayoutBounds="1,1,1,0.7"
+                        AbsoluteLayout.LayoutFlags="All"
+                        BackgroundColor="#EE888888">
+                <StackLayout Orientation="Vertical"
+                         AbsoluteLayout.LayoutBounds="1,1,1,1"
+                         AbsoluteLayout.LayoutFlags="All">
+                    <StackLayout x:Name="expandingTitleLayout"
+                             Padding="0,0,0,0"
+                             Orientation="Horizontal"
+                             AbsoluteLayout.LayoutFlags="WidthProportional,PositionProportional"
+                             AbsoluteLayout.LayoutBounds="0,0,1,AutoSize"
+                             BackgroundColor="#CC111111" >
+                        <Button x:Name="toggleButton"
+                            TextColor="White"
+                            Clicked="toggleButton_Clicked"
+                            HorizontalOptions="EndAndExpand" />
+                    </StackLayout>
+                    <ScrollView HorizontalOptions="Fill"
+                                VerticalOptions="FillAndExpand"
+                                Padding="10">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="6*" />
+                                <ColumnDefinition Width="4*" />
+                                <ColumnDefinition Width="3*" />
+                            </Grid.ColumnDefinitions>
+                            <Label x:Name="priceModelLabel"
+                               Grid.Row="0"
+                               Grid.Column="0"
+                               VerticalOptions="Center"/>
+                            <Entry x:Name="priceModel"
+                               Grid.Row="0"
+                               Grid.Column="1"
+                               IsEnabled="False"
+                               VerticalOptions="Center"/>
+                            <Label x:Name="priceSpecialLabel"
+                               Grid.Row="1"
+                               Grid.Column="0"
+                               VerticalOptions="Center"/>
+                            <Entry x:Name="priceSpecial"
+                               Grid.Row="1"
+                               Grid.Column="1"
+                               IsEnabled="False"
+                               VerticalOptions="Center"/>
+                            <Label x:Name="discountLabel"
+                               Grid.Row="2"
+                               Grid.Column="0"
+                               VerticalOptions="Center" />
+                            <Entry x:Name="discount"
+                               Grid.Row="2"
+                               Grid.Column="1"
+                               IsEnabled="True"
+                               Keyboard="Numeric"
+                               Completed="discount_Completed"
+                               VerticalOptions="Center"/>
+                            <Label x:Name="endPriceLabel"
+                               Grid.Row="3"
+                               Grid.Column="0"
+                               VerticalOptions="Center" />
+                            <Entry x:Name="endPrice"
+                               Grid.Row="3"
+                               Grid.Column="1"
+                               IsEnabled="False"
+                               VerticalOptions="Center" />
+                            <Button x:Name="discountButton"
+                                Clicked="discountButton_Clicked"
+                                Grid.Row="3"
+                                Grid.Column="2"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"/>
+                        </Grid>
+                    </ScrollView>
+                </StackLayout>
+            </AbsoluteLayout>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

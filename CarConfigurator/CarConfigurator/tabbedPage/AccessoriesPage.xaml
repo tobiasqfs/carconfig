@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarConfigurator.AccessoriesPage">
+    <ContentPage.Content>
+        <ListView x:Name="accessoriesList">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid x:Name="grid"
+                              Padding="0"
+                              ColumnSpacing="10"
+                              RowSpacing="0"
+                              VerticalOptions="Center">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="4*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+                            <Switch IsToggled="{Binding selected}"
+                                    Toggled="listSwitch_Toggled"
+                                    Grid.Row="0"
+                                    Grid.Column="0"/>
+                            <Label Text="{Binding name}"
+                                   Grid.Row="0"
+                                   Grid.Column="1"/>
+                            <Label Text="{Binding id}"
+                                   Grid.Row="0"
+                                   Grid.Column="2"/>
+                            <Label Text="{Binding priceString}"
+                                   Grid.Row="0"
+                                   Grid.Column="3"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

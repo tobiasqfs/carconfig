@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CarConfigurator"
+             xmlns:control="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
+			 x:Class="CarConfigurator.MasterPage"
+			 Padding="0,0,0,0"
+			 Title="CarConfigurator">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <AbsoluteLayout x:Name="mainLayout"
+                    BackgroundColor="Green">
+        <Label Text="Label"
+               VerticalOptions="EndAndExpand"/>
+        <BoxView Color="Aquamarine"
+                 WidthRequest="200"
+                 HeightRequest="200"
+                 VerticalOptions="Center"
+                 HorizontalOptions="Center"/>
+        <AbsoluteLayout x:Name="overlay"
+                        AbsoluteLayout.LayoutBounds="1,1,1,0.7"
+                        AbsoluteLayout.LayoutFlags="All"
+                        BackgroundColor="#CC222222">
+            <StackLayout Orientation="Vertical"
+                         AbsoluteLayout.LayoutBounds="1,1,1,1"
+                         AbsoluteLayout.LayoutFlags="All">
+                <StackLayout x:Name="expandingTitleLayout"
+                             Padding="0,0,0,0"
+                             Orientation="Horizontal"
+                             AbsoluteLayout.LayoutFlags="WidthProportional,PositionProportional"
+                             AbsoluteLayout.LayoutBounds="0,0,1,AutoSize"
+                             BackgroundColor="#CC111111" >
+                    <Button x:Name="toggleButton"
+                            TextColor="White"
+                            Clicked="toggleButton_Clicked"
+                            HorizontalOptions="EndAndExpand" />
+                </StackLayout>
+                <ScrollView HorizontalOptions="Fill"
+                            VerticalOptions="FillAndExpand"
+                            Padding="10">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label x:Name="priceModelLabel"
+                               TextColor="#CCC"
+                               Grid.Row="0"
+                               Grid.Column="0"
+                               VerticalOptions="Center"/>
+                        <Entry x:Name="priceModel"
+                               Grid.Row="0"
+                               Grid.Column="1"
+                               IsEnabled="False"
+                               VerticalOptions="Center"/>
+                        <Label x:Name="priceSpecialLabel"
+                               TextColor="#CCC"
+                               Grid.Row="1"
+                               Grid.Column="0"
+                               VerticalOptions="Center"/>
+                        <Entry x:Name="priceSpecial"
+                               Grid.Row="1"
+                               Grid.Column="1"
+                               IsEnabled="False"
+                               VerticalOptions="Center"/>
+                        <Label x:Name="discountLabel"
+                               TextColor="#CCC"
+                               Grid.Row="2"
+                               Grid.Column="0"
+                               VerticalOptions="Center" />
+                        <Entry x:Name="discount"
+                               Grid.Row="2"
+                               Grid.Column="1"
+                               IsEnabled="True"
+                               Keyboard="Numeric"
+                               VerticalOptions="Center"/>
+                        <Label x:Name="endPriceLabel"
+                               TextColor="#CCC"
+                               Grid.Row="3"
+                               Grid.Column="0"
+                               VerticalOptions="Center" />
+                        <Entry x:Name="endPrice"
+                               Grid.Row="3"
+                               Grid.Column="1"
+                               IsEnabled="False"
+                               VerticalOptions="Center" />
+                        <Button x:Name="discountButton"
+                                TextColor="White"
+                                Clicked="discountButton_Clicked"
+                                Grid.Row="3"
+                                Grid.Column="2"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"/>
+                    </Grid>
+                </ScrollView>
+            </StackLayout>
+        </AbsoluteLayout>
+    </AbsoluteLayout>
+</ContentPage>

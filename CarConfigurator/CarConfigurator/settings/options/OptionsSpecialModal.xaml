@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarConfigurator.settings.options.OptionsSpecialModal">
+    <ContentPage.Content>
+        <!-- <ScrollView>
+        </ScrollView> -->
+        <StackLayout Padding="0"
+                     Spacing="0"
+                     Margin="0"
+                     VerticalOptions="CenterAndExpand"
+                     HorizontalOptions="CenterAndExpand">
+            <Grid VerticalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label x:Name="SpecialNameLabel"
+                       Grid.Row="0"
+                       Grid.Column="0"
+                       FontSize="Medium"
+                       HorizontalOptions="Start"
+                       VerticalOptions="CenterAndExpand"/>
+                <Entry x:Name="SpecialName"
+                       Grid.Row="0"
+                       Grid.Column="1"
+                       IsPassword="False"
+                       VerticalOptions="CenterAndExpand" />
+                <Label x:Name="SpecialPriceLabel"
+                       Grid.Row="1"
+                       Grid.Column="0"
+                       FontSize="Medium"
+                       HorizontalOptions="Start"
+                       VerticalOptions="CenterAndExpand" />
+                <Entry x:Name="SpecialPrice"
+                       Grid.Row="1"
+                       Grid.Column="1"
+                       VerticalOptions="CenterAndExpand" />
+                <Label x:Name="SeperatePricesLabel"
+                       Grid.Row="2"
+                       Grid.Column="0"
+                       FontSize="Medium"
+                       HorizontalOptions="Start"
+                       VerticalOptions="CenterAndExpand" />
+                <Entry x:Name="SeperatePrices"
+                       Grid.Row="2"
+                       Grid.Column="1"
+                       IsEnabled="False"
+                       VerticalOptions="CenterAndExpand" />
+            </Grid>
+            <Label x:Name="DescriptionLabel"
+                   FontSize="Medium"
+                   HorizontalOptions="Start" />
+            <Editor x:Name="DescriptionEditor"
+                    HeightRequest="80"/>
+            <Label x:Name="ContainedAccessoriesLabel"
+                   FontSize="Medium"
+                   HorizontalOptions="Start" />
+            <ListView x:Name="accessoriesList"
+                      HeightRequest="80">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid x:Name="grid"
+                              Padding="0"
+                              ColumnSpacing="10"
+                              RowSpacing="0"
+                              VerticalOptions="Center">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="4*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                </Grid.ColumnDefinitions>
+                                <Switch IsToggled="{Binding selected}"
+                                    Toggled="listSwitch_Toggled"
+                                    Grid.Row="0"
+                                    Grid.Column="0"/>
+                                <Label Text="{Binding name}"
+                                   Grid.Row="0"
+                                   Grid.Column="1"/>
+                                <Label Text="{Binding id}"
+                                   Grid.Row="0"
+                                   Grid.Column="2"/>
+                                <Label Text="{Binding priceString}"
+                                   Grid.Row="0"
+                                   Grid.Column="3"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="CenterAndExpand"
+                         VerticalOptions="CenterAndExpand" >
+                <Button x:Name="FinishButton"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Clicked="Finish_Clicked" />
+                <Button x:Name="CancelButton"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Clicked="Cancel_Clicked" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

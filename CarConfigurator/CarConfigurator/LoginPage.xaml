@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarConfigurator.LoginPage"
+             Padding="30">
+
+    <Grid VerticalOptions="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Label x:Name="status"
+               Grid.Row="0"
+               Grid.Column="0"
+               Grid.ColumnSpan="2"
+               Text="" 
+               FontSize="Medium"
+               HorizontalOptions="Start"
+               VerticalOptions="CenterAndExpand" />
+        <Label x:Name="userLabel"
+               Grid.Row="1"
+               Grid.Column="0"
+               FontSize="Medium"
+               HorizontalOptions="Start"
+               VerticalOptions="CenterAndExpand"/>
+        <Entry x:Name="userField"
+               Grid.Row="1"
+               Grid.Column="1"
+               IsPassword="False"
+               VerticalOptions="CenterAndExpand"/>
+        <Label x:Name="pwdLabel"
+               Grid.Row="2"
+               Grid.Column="0"
+               Text=""
+               FontSize="Medium"
+               HorizontalOptions="Start"
+               VerticalOptions="CenterAndExpand"/>
+        <Entry x:Name="pwdField"
+               Grid.Row="2"
+               Grid.Column="1"
+               IsPassword="True"
+               VerticalOptions="CenterAndExpand"/>
+        <Button x:Name="loginBtn"
+                Grid.Row="3"
+                Grid.Column="0"
+                Text=""
+                Clicked="Login"/>
+        <Button x:Name="cancelBtn"
+                Grid.Row="3"
+                Grid.Column="1"
+                Text=""
+                Clicked="Cancel"/>
+    </Grid>
+</ContentPage>

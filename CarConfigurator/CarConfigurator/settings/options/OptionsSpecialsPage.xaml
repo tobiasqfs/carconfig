@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarConfigurator.settings.options.OptionsSpecialsPage"
+             Disappearing="ContentPage_Disappearing">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="NewButton"
+                     Order="Secondary"
+                     Clicked="NewButton_Clicked"
+                     Priority="1" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ListView x:Name="specialsList"
+                  ItemSelected="specialsList_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem x:Name="DetailsButton"
+                                      Clicked="MenuItem_Details"
+                                      CommandParameter="{Binding .}"
+                                      Text="{StaticResource DetailsButtonText}" />
+                            <MenuItem x:Name="ChangeButton"
+                                      Clicked="MenuItem_Change"
+                                      CommandParameter="{Binding .}"
+                                      Text="{StaticResource ChangeButtonText}" />
+                            <MenuItem x:Name="DeleteButton"
+                                      Clicked="MenuItem_Delete"
+                                      CommandParameter="{Binding .}"
+                                      Text="{StaticResource DeleteButtonText}"
+                                      IsDestructive="True" />
+                        </ViewCell.ContextActions>
+                        <Grid Padding="5"
+                              ColumnSpacing="0"
+                              RowSpacing="0"
+                              VerticalOptions="Center">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding name}"
+                                   Grid.Row="0"
+                                   Grid.Column="0" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

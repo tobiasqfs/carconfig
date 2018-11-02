@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarConfigurator.settings.options.OptionsVehicleModal">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand"
+                     HorizontalOptions="CenterAndExpand">
+            <Grid VerticalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label x:Name="VehicleNameLabel"
+                       Grid.Row="0"
+                       Grid.Column="0"
+                       FontSize="Medium"
+                       HorizontalOptions="Start"
+                       VerticalOptions="CenterAndExpand"/>
+                <Entry x:Name="VehicleName"
+                       Grid.Row="0"
+                       Grid.Column="1"
+                       IsPassword="False"
+                       VerticalOptions="CenterAndExpand"/>
+                <Label x:Name="VehiclePriceLabel"
+                       Grid.Row="1"
+                       Grid.Column="0"
+                       FontSize="Medium"
+                       HorizontalOptions="Start"
+                       VerticalOptions="CenterAndExpand"/>
+                <Entry x:Name="VehiclePrice"
+                       Grid.Row="1"
+                       Grid.Column="1"
+                       VerticalOptions="CenterAndExpand"/>
+            </Grid>
+            <StackLayout Orientation="Horizontal"
+                         VerticalOptions="End"
+                         HorizontalOptions="CenterAndExpand">
+                <Button x:Name="FinishButton"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Clicked="Finish_Clicked"/>
+                <Button x:Name="CancelButton"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Clicked="Cancel_Clicked" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

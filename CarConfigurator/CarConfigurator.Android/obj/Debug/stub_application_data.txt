@@ -1,0 +1,2 @@
+android.app.Application
+de.qfs.apps.qftest.demo.CarConfigurator

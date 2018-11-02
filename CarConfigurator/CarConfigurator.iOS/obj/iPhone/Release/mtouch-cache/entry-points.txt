@@ -1,0 +1,28 @@
+Function=xamarin_timezone_get_data
+	/Users/tobias/dev/git/androidDemoApplications/CarConfigurator/CarConfigurator/CarConfigurator.iOS/obj/iPhone/Release/mtouch-cache/Link/mscorlib.dll
+Function=xamarin_GetFolderPath
+	/Users/tobias/dev/git/androidDemoApplications/CarConfigurator/CarConfigurator/CarConfigurator.iOS/obj/iPhone/Release/mtouch-cache/Link/mscorlib.dll
+Function=xamarin_log
+	/Users/tobias/dev/git/androidDemoApplications/CarConfigurator/CarConfigurator/CarConfigurator.iOS/obj/iPhone/Release/mtouch-cache/Link/mscorlib.dll
+Function=CreateZStream
+	/Users/tobias/dev/git/androidDemoApplications/CarConfigurator/CarConfigurator/CarConfigurator.iOS/obj/iPhone/Release/mtouch-cache/Link/System.dll
+Function=CloseZStream
+	/Users/tobias/dev/git/androidDemoApplications/CarConfigurator/CarConfigurator/CarConfigurator.iOS/obj/iPhone/Release/mtouch-cache/Link/System.dll
+Function=Flush
+	/Users/tobias/dev/git/androidDemoApplications/CarConfigurator/CarConfigurator/CarConfigurator.iOS/obj/iPhone/Release/mtouch-cache/Link/System.dll
+Function=ReadZStream
+	/Users/tobias/dev/git/androidDemoApplications/CarConfigurator/CarConfigurator/CarConfigurator.iOS/obj/iPhone/Release/mtouch-cache/Link/System.dll
+Function=WriteZStream
+	/Users/tobias/dev/git/androidDemoApplications/CarConfigurator/CarConfigurator/CarConfigurator.iOS/obj/iPhone/Release/mtouch-cache/Link/System.dll
+Function=xamarin_start_wwan
+	/Users/tobias/dev/git/androidDemoApplications/CarConfigurator/CarConfigurator/CarConfigurator.iOS/obj/iPhone/Release/mtouch-cache/Link/System.dll
+Function=xamarin_find_protocol_wrapper_type
+	/Users/tobias/dev/git/androidDemoApplications/CarConfigurator/CarConfigurator/CarConfigurator.iOS/obj/iPhone/Release/mtouch-cache/Link/Xamarin.iOS.dll
+Function=xamarin_get_block_descriptor
+	/Users/tobias/dev/git/androidDemoApplications/CarConfigurator/CarConfigurator/CarConfigurator.iOS/obj/iPhone/Release/mtouch-cache/Link/Xamarin.iOS.dll
+Function=xamarin_IntPtr_objc_msgSend_IntPtr
+	/Users/tobias/dev/git/androidDemoApplications/CarConfigurator/CarConfigurator/CarConfigurator.iOS/obj/iPhone/Release/mtouch-cache/Link/Xamarin.iOS.dll
+Function=xamarin_IntPtr_objc_msgSendSuper_IntPtr
+	/Users/tobias/dev/git/androidDemoApplications/CarConfigurator/CarConfigurator/CarConfigurator.iOS/obj/iPhone/Release/mtouch-cache/Link/Xamarin.iOS.dll
+Function=UIApplicationMain
+	/Users/tobias/dev/git/androidDemoApplications/CarConfigurator/CarConfigurator/CarConfigurator.iOS/obj/iPhone/Release/mtouch-cache/Link/Xamarin.iOS.dll

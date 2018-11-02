@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarConfigurator.settings.order.OrderDetailsPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <TableView Intent="Form">
+                <TableRoot>
+                    <TableSection x:Name="vehicleDetails">
+                        <EntryCell x:Name="selectedVehicle" 
+                               IsEnabled="False" />
+                    </TableSection>
+                    <TableSection x:Name="specialDetails">
+                        <EntryCell x:Name="selectedSpecial"
+                               IsEnabled="False" />
+                    </TableSection>
+                    <TableSection x:Name="accessoryDetails">
+                    </TableSection>
+                    <TableSection x:Name="priceDetails">
+                        <EntryCell x:Name="finalPrice"
+                               IsEnabled="False" />
+                    </TableSection>
+                    <TableSection x:Name="contactDetails">
+                        <EntryCell x:Name="surname" />
+                        <EntryCell x:Name="firstname" />
+                        <EntryCell x:Name="address" />
+                        <EntryCell x:Name="zipcode" />
+                        <EntryCell x:Name="city" />
+                        <EntryCell x:Name="country" />
+                        <EntryCell x:Name="number" />
+                        <EntryCell x:Name="number2" />
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="CenterAndExpand">
+                <Button x:Name="SendOrderButton"
+                        Clicked="SendOrderButton_Clicked"></Button>
+                <Button x:Name="CancelButton2"
+                        Clicked="CancelButton2_Clicked"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

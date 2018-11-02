@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarConfigurator.settings.order.OrderStatisticsPage">
+    <ContentPage.Content>
+        <StackLayout Padding="0"
+                     Spacing="0">
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="Center">
+                <Label x:Name="SelectedModelLbl"
+                       FontSize="Medium" 
+                       HorizontalOptions="Start"
+                       VerticalOptions="CenterAndExpand" />
+                <Entry x:Name="SelectedModelTxtFld"
+                       IsEnabled="False"
+                       VerticalOptions="CenterAndExpand" />
+            </StackLayout>
+            <Grid x:Name="headers"
+                  Padding="10"
+                  HorizontalOptions="CenterAndExpand"
+                  BackgroundColor="LightGray">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label x:Name="headerWeek"
+                       Grid.Row="0"
+                       Grid.Column="0"
+                       HorizontalOptions="Start"
+                       VerticalOptions="CenterAndExpand"/>
+                <Label x:Name="headerOrderedAmount"
+                       Grid.Row="0"
+                       Grid.Column="1"
+                       HorizontalOptions="Start"
+                       VerticalOptions="CenterAndExpand" />
+            </Grid>
+            <ListView x:Name="contentList">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="0"
+                                  ColumnSpacing="0"
+                                  VerticalOptions="Center">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Label Text="{Binding week}"
+                                       Grid.Row="0"
+                                       Grid.Column="0" />
+                                <Label Text="{Binding amount}"
+                                       Grid.Row="0"
+                                       Grid.Column="1"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button x:Name="OkButton"
+                    Text="Ok"
+                    Clicked="OkButton_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
